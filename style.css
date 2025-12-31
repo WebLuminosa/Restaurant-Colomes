@@ -1,0 +1,372 @@
+/* 💡 Desplazamiento suave para los anclajes */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================================== */
+/* 0. RESET DE MARGENES (Solución) */
+/* ================================== */
+
+/* Elimina el margen por defecto de la mayoría de los navegadores */
+html, body, header, nav, ul, li, h1, h2, h3, p, section, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño total */
+}
+
+/* Luego, asegúrate de que el body no tenga un margin no deseado */
+body {
+    background-color: antiquewhite;
+    font-family: sans-serif;
+}
+
+/* ================================== */
+/* 1. NAVEGACIÓN Y MENÚ FIJO (Sticky) */
+/* ================================== */
+
+/* 💡 Estilos del <header> */
+header {
+    background-color: #5C1D2F;
+    height: 90px;
+    transition: all 0.3s ease;
+}
+
+/* 💡 Estilo para cuando el scroll activa la clase 'sticky' */
+header.sticky {
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    height: 100%; /* Ocupa la altura del header (90px) */
+    margin: 0px;
+    display: flex;
+    justify-content: right;
+    padding-right: 30px;
+    align-items: center;
+}
+
+li { 
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: the seasons; 
+    font-size: 30px;
+    font-weight: 500;
+    padding: 18px;
+    transition: text-decoration 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ================================== */
+/* 2. SECCIONES HERO Y TÍTULOS */
+/* ================================== */
+
+/* Estilos comunes para las secciones con imagen de fondo */
+.hero, .hero2 {
+    height: 82vh; 
+    margin: 0px;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    box-shadow: 0 10px 30px 8px rgba(0, 0, 0, 0.42);
+    /* Flexbox para centrar H1 y H2 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.hero {
+    background-image: url(https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg);
+}
+
+.hero2 {
+    background-image: url(https://images.pexels.com/photos/2403392/pexels-photo-2403392.jpeg);
+}
+
+h1, h2 {
+    color: white;
+    font-family: the seasons;
+    font-weight: 200;
+    margin: 0px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); 
+    text-align: center;
+}
+
+h1 {
+    font-size: 120px;
+}
+
+h2 {
+    font-size: 44px;
+}
+
+h3 {
+    font-size: 34px;
+    text-align: center;
+    margin-top: 80px;
+    color: #5C1D2F;
+}
+
+/* 💡 Párrafo mejorado con ancho máximo para legibilidad */
+p {
+    font-size: 22px;
+    line-height: 1.5; 
+    text-align: center;
+    
+    max-width: 900px;
+    margin: 80px auto 0; 
+    padding: 0 20px 50px 20px;
+}
+
+/* ================================== */
+/* 3. GALERÍA (FIGURE / FIGCAPTION) */
+/* ================================== */
+
+/* 💡 El contenedor <figure> ahora gestiona el margen de cada elemento */
+figure {
+    margin: 40px; 
+    margin-top: 100px; 
+    text-align: center; 
+    padding: 0; 
+    /* AJUSTADO: Limitar el ancho del contenedor figure en escritorio */
+    max-width: 400px; 
+}
+
+img {
+    /* AJUSTADO: Mayor flexibilidad por defecto */
+    width: 100%;
+    max-width: 400px;
+    height: auto; 
+    
+    border-radius: 14px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+figcaption {
+    font-size: 18px;
+    color: #5C1D2F;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+.image-catalog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+/* ======================== */
+/* SECCIÓN DESTACADA */
+/* ======================== */
+
+.contenedor-destacado {
+     padding: 60px 5%;
+     text-align: center;
+     background: #5C1D2F;
+ }
+
+ /* AJUSTADO: Se quita el margin-top para evitar conflicto con el padding del contenedor */
+ .titulo-destacado {
+    font-size: 46px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 10px;
+ }
+ 
+/* AJUSTADO: Mejor contraste y tamaño */
+.subtitulo-destacado {
+     color: #ccc;
+     font-size: 1.5rem;
+     margin-bottom: 40px; 
+     margin-top: 0;
+     max-width: 600px;
+     margin-left: auto;
+     margin-right: auto;
+} 
+
+.ejemplo-visual {
+    display: flex;
+    justify-content: center;
+     margin: 0 auto 30px;
+     border-radius: 10px;
+     overflow: hidden; 
+} 
+
+.imagen-destacada {
+    width: 100%;
+     height: auto;
+     display: block;
+ } 
+ 
+ .boton-portafolio {
+     display: inline-block;
+     background: #ccc;
+     color: #5C1D2F;
+     padding: 12px 35px;
+     border-radius: 8px;
+     text-decoration: none;
+     font-weight: 600;
+     transition: all 0.3s ease; 
+} 
+
+.boton-portafolio:hover {
+     background-color: #5C1D2F;
+     color: #ccc;
+     border: 2px solid #ccc;
+     transform: translateY(-2px); 
+}
+
+/* ======================== */
+/* SECCIÓN NOSALTRES */
+/* ======================== */
+
+/* AÑADIDO: Fondo blanco para un mejor contraste en el contenido de texto y chefs */
+#nosaltres {
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+
+/* ================================== */
+/* 7. ESTILOS DEL FORMULARIO DE RESERVA */
+/* ================================== */
+
+.contact-section {
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+    text-align: center; 
+}
+
+/* NUEVO: Estilo para la información de contacto */
+.contact-info {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5C1D2F;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+/* Contenedor del formulario */
+.reservation-form {
+    max-width: 600px; 
+    margin: 40px auto 0; 
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    text-align: left; 
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5C1D2F;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box; 
+    font-family: sans-serif;
+}
+
+textarea {
+    resize: vertical; 
+}
+
+.submit-button {
+    background-color: #5C1D2F;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #753347; 
+}
+
+/* AJUSTADO: Mejor estilo para el footer */
+footer {
+    background-color: #5C1D2F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+/* ================================== */
+/* 5. DISEÑO RESPONSIVO (Móviles) */
+/* ================================== */
+
+@media (max-width: 1300px) {
+    /* Títulos más pequeños */
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+    
+    /* Navegación más pequeña */
+    a {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    nav ul {
+        padding-right: 10px;
+    }
+
+    /* Galería apilada verticalmente */
+    .image-catalog {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    /* Imágenes y figuras más flexibles en móvil */
+    figure {
+        margin: 20px 0;
+        width: 90%; 
+        max-width: none; 
+    }
+    
+    img {
+        width: 100%;
+        max-width: none;
+    }
+}

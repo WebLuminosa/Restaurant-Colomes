@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Colomes - Inici</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inici">Inici</a></li>
+                <li><a href="#nosaltres">Nosaltres</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contacte">Contacte</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" id="inici">
+        <h1>Restaurant Colomes</h1>
+        <h2>Menjar Fresc i de qualitat</h2>
+    </section>
+
+    <section id="galeria"> 
+        <h3>Top Menús del Mes</h3>
+        <div class="image-catalog">
+            <figure> 
+                <img src="https://images.pexels.com/photos/580612/pexels-photo-580612.jpeg" alt="Plato principal de temporada">
+                <figcaption>Hamburguesa de Bacon amb crema Catalana</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.pexels.com/photos/3630141/pexels-photo-3630141.jpeg" alt="Postre artesanal">
+                <figcaption>Double Burger Tradicional Catala.</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.pexels.com/photos/23910872/pexels-photo-23910872.jpeg" alt="Tapas y aperitivos">
+                <figcaption>Torre De Hamburgueses de Bacon.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <div class="contenedor-destacado">
+         <h3 class="titulo-destacado">✨ Menú Especial Nadalenca ✨</h3>
+          <p class="subtitulo-destacado">Frankfurt de 2,00 € amb Xocolata Calenta</p>
+           <div class="ejemplo-visual">
+             <img src="oferta-nadalenca.png" alt="Oferta Navideña Menú" class="imagen-destacada">
+         </div> 
+         <a href="#contacte" class="boton-portafolio">¡Reserva tu Mesa Ahora!</a> 
+    </div>
+
+    <section id="nosaltres">
+        <section class="hero2">
+            <h1>El Nostre Origen</h1>
+            <h2>De Generació a Generació:</h2>
+        </section>
+        
+        <p>En el corazón de Santa Coloma de Gramenet, Restaurant Colomes es más que un restaurante: es una tradición familiar. Desde hace 34 años (o "generaciones"), hemos mantenido vivo el espíritu de la cocina casera catalana. Nuestro nombre, "Restaurante Colomesa", no es casualidad. Representa el valor de la autenticidad, la mesa donde la familia se reúne y donde cada plato cuenta una historia. Nuestro Compromiso: Producto Local: Creemos firmemente en el sabor de nuestra tierra. Todos nuestros ingredientes provienen de proveedores de proximidad para garantizar la máxima frescura y calidad en su mesa. Cocina de Siempre: Mantenemos las recetas tradicionales que nos han acompañado durante décadas, servidas con el calor y el cuidado de siempre. Le invitamos a sentarse con nosotros y formar parte de esta historia. En el Restaurant Colomes, se come con el alma y se vive la tradición. ¡Benvinguts!</p>
+    
+        <h3>Els Nostres Chefs</h3>
+        <div class="image-catalog">
+            <figure> 
+                <img src="https://images.pexels.com/photos/12276390/pexels-photo-12276390.jpeg" alt="Chef de cocina">
+                <figcaption>Jordi Claramunt - Chef Ejecutivo.</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.pexels.com/photos/6605421/pexels-photo-6605421.jpeg" alt="Chef Pastelero">
+                <figcaption>Martí Miró - Chef Pasteler.</figcaption>
+            </figure>
+            <figure>
+                <img src="https://images.pexels.com/photos/3814446/pexels-photo-3814446.jpeg" alt="Cocinero Sous-chef">
+                <figcaption>Marc Vidal - Sous-chef.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="contacte" class="contact-section">
+        <h3>Reservar Mesa</h3>
+        <p class="contact-info">
+            Llama para reservas inmediatas: 93 123 45 67
+        </p>
+
+        <form action="/submit-reservation" method="POST" class="reservation-form">
+            
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Fecha de Reserva:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Hora:</label>
+            <input type="time" id="time" name="time" min="13:00" max="23:00" required>
+
+            <label for="guests">Número de Personas:</label>
+            <input type="number" id="guests" name="guests" min="1" max="12" value="2" required>
+
+            <label for="notes">Notas (Opcional):</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+            
+            <button type="submit" class="submit-button">Confirmar Reserva</button>
+            
+        </form>
+    </section>
+
+    <footer>
+        Trobeunos en: Carrer de la Generalitat, 100 <br>
+        Hecho por Rahat Farazi en Nov. 2025
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
